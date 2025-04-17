@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Video Altyazı Çevirmen",
+  "version": "1.0",
+  "description": "Video altyazılarını Ollama Mistral AI kullanarak Türkçe'ye çevirir",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting",
+    "webRequest"
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://*.vimeo.com/*",
+        "*://*.dailymotion.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["styles.css"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+} 

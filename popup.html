@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      text-align: center;
+    }
+    select {
+      width: 100%;
+      padding: 8px;
+      margin: 10px 0;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    .settings {
+      margin-top: 15px;
+      text-align: left;
+    }
+    .status {
+      margin-top: 10px;
+      padding: 8px;
+      border-radius: 4px;
+      display: none;
+    }
+    .status.success {
+      background-color: #e8f5e9;
+      color: #2e7d32;
+    }
+    .status.error {
+      background-color: #ffebee;
+      color: #c62828;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h3>Video Altyazı Çevirmen</h3>
+    <div class="settings">
+      <label for="targetLang">Hedef Dil:</label>
+      <select id="targetLang">
+        <option value="tr">Türkçe</option>
+        <option value="en">İngilizce</option>
+        <option value="de">Almanca</option>
+        <option value="fr">Fransızca</option>
+        <option value="es">İspanyolca</option>
+        <option value="it">İtalyanca</option>
+      </select>
+    </div>
+    <p>Video oynatıcıda görünen 🌐 butonuna tıklayarak altyazıları çevirebilirsiniz.</p>
+    <div id="status" class="status"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html> 

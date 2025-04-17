@@ -1,0 +1,43 @@
+.translate-button {
+  width: 48px;
+  height: 48px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  padding: 8px;
+  margin: 0 5px;
+}
+
+.translate-button:hover {
+  opacity: 0.8;
+}
+
+.translation-progress-container {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  padding: 15px;
+  z-index: 9999;
+}
+
+.translation-progress {
+  height: 4px;
+  background: #4CAF50;
+  width: 0%;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.translation-progress-text {
+  color: white;
+  text-align: center;
+  margin-top: 8px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+} 
